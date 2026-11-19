@@ -1,0 +1,51 @@
+.kanban-board{
+
+ display:grid;
+
+ grid-template-columns:
+ repeat(4,1fr);
+
+ gap:20px;
+}
+
+.kanban-column{
+
+ background:#f8fafc;
+
+ border-radius:10px;
+
+ padding:15px;
+
+ min-height:600px;
+}
+
+.kanban-task{
+
+ background:white;
+
+ padding:15px;
+
+ margin-top:15px;
+
+ border-radius:10px;
+
+ cursor:grab;
+
+ box-shadow:
+ 0 2px 6px
+ rgba(0,0,0,.1);
+}
+
+.kanban-task:hover{
+
+ transform:scale(1.02);
+
+ transition:.2s;
+}
+
+.kanban-column h2{
+
+ margin-bottom:20px;
+
+ text-align:center;
+}
