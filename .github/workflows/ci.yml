@@ -39,6 +39,24 @@ jobs:
       - name: Run Backend Tests
         run: npm test --if-present
 
+        -name: Show Backend Package
+          run: cat package.json
+
+        -name: Run Backend Tests
+         run: npm test
+
+        -name: Install Backend Dependencies
+          run: npm ci
+
+        -name: Show Backend Package
+         run: cat package.json
+
+        -name: Check Backend
+         run: npm run lint --if-present
+
+        -name: Run Backend Tests
+         run: npm test 
+
   frontend:
 
     runs-on: ubuntu-latest
