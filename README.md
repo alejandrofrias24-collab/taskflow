@@ -39,3 +39,7 @@ Este comando elimina los datos de MongoDB y SQL Server:
 
 El archivo docker-compose.yml incluye ambos motores de base de datos además de
 la API y el frontend para que todo el stack sea reproducible con Docker.
+
+# TaskFlow
+
+https://github.com/alejandrofrias24-collab/TaskFlow/actions/workflows/ci.yml/badge.svg

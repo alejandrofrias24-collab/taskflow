@@ -20,10 +20,17 @@ export default function KanbanColumn({
       onDragOver={(event) => event.preventDefault()}
       onDrop={handleDrop}
     >
-      <h2>{title}</h2>
-      {tasks.map((task) => (
-        <KanbanTask key={task.id} task={task} />
-      ))}
+      <div className="kanban-column-heading">
+        <h3>{title}</h3>
+        <span>{tasks.length}</span>
+      </div>
+      <div className="kanban-column-cards">
+        {tasks.length === 0 ? (
+          <p className="kanban-empty">Suelta una tarea aquí</p>
+        ) : (
+          tasks.map((task) => <KanbanTask key={task.id} task={task} />)
+        )}
+      </div>
     </div>
   );
 }

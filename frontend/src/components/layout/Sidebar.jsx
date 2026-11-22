@@ -20,10 +20,12 @@ export default function Sidebar() {
     <aside className="sidebar">
 
       <div className="logo">
+        <span className="brand-mark">T</span>
         <h2>TaskFlow</h2>
       </div>
 
       <nav>
+        <span className="sidebar-section-label">MENÚ</span>
 
         <Link
           to="/"

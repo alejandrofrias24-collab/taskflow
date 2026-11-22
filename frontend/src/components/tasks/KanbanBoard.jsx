@@ -1,9 +1,11 @@
 import KanbanColumn from "./KanbanColumn";
 import { updateStatus } from "../../services/taskService";
+import "../../styles/Kanban.css";
 
 export default function KanbanBoard({
   tasks,
   reload,
+  onMoveError,
 }) {
   const columns = [
     { id: "Pendiente", title: "Pendiente" },
@@ -13,8 +15,12 @@ export default function KanbanBoard({
   ];
 
   const handleDrop = async (taskId, status) => {
-    await updateStatus(taskId, status);
-    await reload();
+    try {
+      await updateStatus(taskId, status);
+      await reload();
+    } catch (error) {
+      onMoveError?.(error);
+    }
   };
 
   return (
