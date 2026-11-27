@@ -4,6 +4,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 
+COPY vite.config.js ./
 COPY index.html ./
 COPY src ./src
 COPY public ./public
