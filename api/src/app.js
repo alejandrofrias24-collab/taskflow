@@ -4,6 +4,8 @@ const cors = require("cors");
 const authRoutes =
 require("./routes/authRoutes");
 
+const variableSinUsarParaPrueba = "error_lint";
+
 const taskRoutes =
 require("./routes/taskRoutes");
 
